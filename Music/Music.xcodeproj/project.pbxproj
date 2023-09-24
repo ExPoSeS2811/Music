@@ -8,18 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		CA4E26B62AC0AB77000480D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E26B52AC0AB77000480D3 /* AppDelegate.swift */; };
-		CA4E26BA2AC0AB77000480D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E26B92AC0AB77000480D3 /* ViewController.swift */; };
+		CA4E26BA2AC0AB77000480D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E26B92AC0AB77000480D3 /* LoginViewController.swift */; };
 		CA4E26BF2AC0AB78000480D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4E26BE2AC0AB78000480D3 /* Assets.xcassets */; };
 		CA4E26C22AC0AB78000480D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4E26C02AC0AB78000480D3 /* LaunchScreen.storyboard */; };
+		CA78AF002AC0CD2A00699F55 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AEFF2AC0CD2A00699F55 /* Button.swift */; };
+		CA78AF022AC0DE2300699F55 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AF012AC0DE2300699F55 /* StackView.swift */; };
+		CA78AF052AC0E29000699F55 /* UIStackView+addSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */; };
+		CA8DA31C2AC0BB630026C4EB /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DA31B2AC0BB630026C4EB /* TextField.swift */; };
+		CA8DA31E2AC0BD2E0026C4EB /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DA31D2AC0BD2E0026C4EB /* Label.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CA4E26B22AC0AB77000480D3 /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4E26B52AC0AB77000480D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA4E26B92AC0AB77000480D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA4E26B92AC0AB77000480D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA4E26BE2AC0AB78000480D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA4E26C12AC0AB78000480D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA4E26C32AC0AB78000480D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA78AEFF2AC0CD2A00699F55 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		CA78AF012AC0DE2300699F55 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+addSubview.swift"; sourceTree = "<group>"; };
+		CA8DA31B2AC0BB630026C4EB /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		CA8DA31D2AC0BD2E0026C4EB /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,7 @@
 		CA4E26B42AC0AB77000480D3 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				CA78AF032AC0E26300699F55 /* Extensions */,
 				CA4E26CA2AC0AC60000480D3 /* Application */,
 				CA4E26CC2AC0AC82000480D3 /* Modules */,
 				CA4E26C92AC0AC1E000480D3 /* Resources */,
@@ -80,7 +91,7 @@
 		CA4E26CB2AC0AC76000480D3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CA4E26B92AC0AB77000480D3 /* ViewController.swift */,
+				CA4E26B92AC0AB77000480D3 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +125,10 @@
 		CA4E26CF2AC0ACAE000480D3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA8DA31B2AC0BB630026C4EB /* TextField.swift */,
+				CA78AF012AC0DE2300699F55 /* StackView.swift */,
+				CA78AEFF2AC0CD2A00699F55 /* Button.swift */,
+				CA8DA31D2AC0BD2E0026C4EB /* Label.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,6 +138,14 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CA78AF032AC0E26300699F55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,8 +218,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA4E26BA2AC0AB77000480D3 /* ViewController.swift in Sources */,
+				CA78AF002AC0CD2A00699F55 /* Button.swift in Sources */,
+				CA8DA31C2AC0BB630026C4EB /* TextField.swift in Sources */,
+				CA78AF052AC0E29000699F55 /* UIStackView+addSubview.swift in Sources */,
+				CA4E26BA2AC0AB77000480D3 /* LoginViewController.swift in Sources */,
+				CA8DA31E2AC0BD2E0026C4EB /* Label.swift in Sources */,
 				CA4E26B62AC0AB77000480D3 /* AppDelegate.swift in Sources */,
+				CA78AF022AC0DE2300699F55 /* StackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
