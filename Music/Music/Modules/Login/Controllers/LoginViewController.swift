@@ -79,7 +79,7 @@ class LoginViewController: UIViewController {
 
     @objc private func loginWithGoogleButtonTapped(_ sender: UIButton) {}
     @objc private func registerTapped() {
-        let registerVC = SignUpViewController()
+        let registerVC = CreateAccountViewController()
         navigationController?.pushViewController(registerVC, animated: true)
     }
 

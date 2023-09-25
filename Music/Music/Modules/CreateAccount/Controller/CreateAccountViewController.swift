@@ -36,7 +36,11 @@ class CreateAccountViewController: UIViewController {
     
     private lazy var emailTextField = CreateAccountTextField(placeholder: "Enter your email address")
     private lazy var orContinueStackView: UIStackView = OrContinueStackView()
-    private lazy var loginButton: UIButton = LoginButton(title: "Sign up with email")
+    private lazy var loginButton: UIButton = {
+        let button = LoginButton(title: "Sign up with email")
+        button.addTarget(self, action: #selector(signUpButtonPressed(_:)), for: .touchUpInside)
+        return button
+    }()
     private lazy var loginWithGoogleButton: UIButton = LoginWithGoogleButton(title: "Continue with Google")
 
     private lazy var registerStackView: UIStackView = {
@@ -63,8 +67,12 @@ class CreateAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupNavigationBarWithBackButton(title: "")
     }
-    
+    @IBAction private func signUpButtonPressed(_ sender: UIButton) {
+        let vc = SignUpViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
     private func setupUI() {
         view.backgroundColor = .systemBlue
         view.addSubviews(greetingStackView, contentView, mainStackView)
