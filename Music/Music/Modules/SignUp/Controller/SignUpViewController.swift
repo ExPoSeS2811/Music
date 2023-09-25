@@ -19,17 +19,11 @@ class SignUpViewController: UIViewController {
         view.backgroundColor = .systemBackground
     }
     
-    
-    
-    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         setupNavigationBarWithBackButton(title: "Sign Up")
         setupUI()
     }
-    
-    
-    
     
     @IBAction private func signUpButtonPressed(_ sender: UIButton) {
         print("Sign Up button pressed")

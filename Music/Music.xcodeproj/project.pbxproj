@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		40CA63502AC1DC7C00B8B4DA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA63482AC1C45C00B8B4DA /* OnboardingViewController.swift */; };
+		40CA63582AC1E9CF00B8B4DA /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA63462AC1A93300B8B4DA /* NavigationBar.swift */; };
+		40CA63592AC1E9D300B8B4DA /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA63422AC195E200B8B4DA /* UIScrollView.swift */; };
+		40CA635A2AC1E9D500B8B4DA /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA634E2AC1CFE500B8B4DA /* UIImageView.swift */; };
+		40CA635B2AC1E9D700B8B4DA /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA633E2AC18AA300B8B4DA /* UILabel.swift */; };
+		40CA635C2AC1E9D900B8B4DA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA63402AC1944F00B8B4DA /* UIButton.swift */; };
+		40CA635D2AC1E9DB00B8B4DA /* addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA63442AC19FA800B8B4DA /* addSubviews.swift */; };
 		CA4E26B62AC0AB77000480D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E26B52AC0AB77000480D3 /* AppDelegate.swift */; };
 		CA4E26BA2AC0AB77000480D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E26B92AC0AB77000480D3 /* LoginViewController.swift */; };
 		CA4E26BF2AC0AB78000480D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4E26BE2AC0AB78000480D3 /* Assets.xcassets */; };
@@ -15,7 +21,6 @@
 		CA78AF002AC0CD2A00699F55 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AEFF2AC0CD2A00699F55 /* Button.swift */; };
 		CA78AF022AC0DE2300699F55 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AF012AC0DE2300699F55 /* StackView.swift */; };
 		CA78AF052AC0E29000699F55 /* UIStackView+addSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */; };
-		CA78AF0E2AC0EBBB00699F55 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AF0D2AC0EBBB00699F55 /* RegisterTextField.swift */; };
 		CA8DA31C2AC0BB630026C4EB /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DA31B2AC0BB630026C4EB /* TextField.swift */; };
 		CA8DA31E2AC0BD2E0026C4EB /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DA31D2AC0BD2E0026C4EB /* Label.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +34,7 @@
 		40CA63462AC1A93300B8B4DA /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		40CA63482AC1C45C00B8B4DA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		40CA634E2AC1CFE500B8B4DA /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		CA4E26B22AC0AB77000480D3 /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Music.app; path = "/Users/fullzoom/Desktop/Education/Projects/Music/Music/build/Debug-iphoneos/Music.app"; sourceTree = "<absolute>"; };
+		40CA63572AC1E76900B8B4DA /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Music.app; path = "/Users/fullzoom/Desktop/Education/Projects/Music/Music/build/Debug-iphoneos/Music.app"; sourceTree = "<absolute>"; };
 		CA4E26B52AC0AB77000480D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA4E26B92AC0AB77000480D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA4E26BE2AC0AB78000480D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,7 +43,6 @@
 		CA78AEFF2AC0CD2A00699F55 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CA78AF012AC0DE2300699F55 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+addSubview.swift"; sourceTree = "<group>"; };
-		CA78AF0D2AC0EBBB00699F55 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
 		CA8DA31B2AC0BB630026C4EB /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		CA8DA31D2AC0BD2E0026C4EB /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				40CA63462AC1A93300B8B4DA /* NavigationBar.swift */,
+				CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */,
 				40CA63422AC195E200B8B4DA /* UIScrollView.swift */,
 				40CA634E2AC1CFE500B8B4DA /* UIImageView.swift */,
 				40CA633E2AC18AA300B8B4DA /* UILabel.swift */,
@@ -123,26 +128,16 @@
 			path = UIBuilder;
 			sourceTree = "<group>";
 		};
-		40CA63562AC1DF7F00B8B4DA /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				CA78AF0D2AC0EBBB00699F55 /* RegisterTextField.swift */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		CA4E26A92AC0AB77000480D3 = {
 			isa = PBXGroup;
 			children = (
 				CA4E26B42AC0AB77000480D3 /* Music */,
-				40CA63562AC1DF7F00B8B4DA /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
 		CA4E26B42AC0AB77000480D3 /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				CA78AF032AC0E26300699F55 /* Extensions */,
 				CA4E26CA2AC0AC60000480D3 /* Application */,
 				CA4E26CC2AC0AC82000480D3 /* Modules */,
 				40CA633D2AC18A0700B8B4DA /* UIBuilder */,
@@ -223,14 +218,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		CA78AF032AC0E26300699F55 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,7 +235,7 @@
 			);
 			name = Music;
 			productName = Music;
-			productReference = CA4E26B22AC0AB77000480D3 /* Music.app */;
+			productReference = 40CA63572AC1E76900B8B4DA /* Music.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -302,14 +289,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA78AF002AC0CD2A00699F55 /* Button.swift in Sources */,
+				40CA635D2AC1E9DB00B8B4DA /* addSubviews.swift in Sources */,
+				40CA635C2AC1E9D900B8B4DA /* UIButton.swift in Sources */,
 				CA8DA31C2AC0BB630026C4EB /* TextField.swift in Sources */,
 				CA78AF052AC0E29000699F55 /* UIStackView+addSubview.swift in Sources */,
 				40CA63502AC1DC7C00B8B4DA /* OnboardingViewController.swift in Sources */,
 				CA4E26BA2AC0AB77000480D3 /* LoginViewController.swift in Sources */,
+				40CA63592AC1E9D300B8B4DA /* UIScrollView.swift in Sources */,
+				40CA635A2AC1E9D500B8B4DA /* UIImageView.swift in Sources */,
+				40CA63582AC1E9CF00B8B4DA /* NavigationBar.swift in Sources */,
 				CA8DA31E2AC0BD2E0026C4EB /* Label.swift in Sources */,
 				CA4E26B62AC0AB77000480D3 /* AppDelegate.swift in Sources */,
+				40CA635B2AC1E9D700B8B4DA /* UILabel.swift in Sources */,
 				CA78AF022AC0DE2300699F55 /* StackView.swift in Sources */,
-				CA78AF0E2AC0EBBB00699F55 /* RegisterTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
