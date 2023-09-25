@@ -14,6 +14,8 @@
 		40CA635B2AC1E9D700B8B4DA /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA633E2AC18AA300B8B4DA /* UILabel.swift */; };
 		40CA635C2AC1E9D900B8B4DA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA63402AC1944F00B8B4DA /* UIButton.swift */; };
 		40CA635D2AC1E9DB00B8B4DA /* addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA63442AC19FA800B8B4DA /* addSubviews.swift */; };
+		40CA63652AC1F92800B8B4DA /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA63642AC1F92800B8B4DA /* CreateAccountViewController.swift */; };
+		40CA63682AC1F97100B8B4DA /* CreateAccountTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CA63672AC1F97100B8B4DA /* CreateAccountTextField.swift */; };
 		CA4E26B62AC0AB77000480D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E26B52AC0AB77000480D3 /* AppDelegate.swift */; };
 		CA4E26BA2AC0AB77000480D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4E26B92AC0AB77000480D3 /* LoginViewController.swift */; };
 		CA4E26BF2AC0AB78000480D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4E26BE2AC0AB78000480D3 /* Assets.xcassets */; };
@@ -34,7 +36,9 @@
 		40CA63462AC1A93300B8B4DA /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		40CA63482AC1C45C00B8B4DA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		40CA634E2AC1CFE500B8B4DA /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		40CA63572AC1E76900B8B4DA /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Music.app; path = "/Users/fullzoom/Desktop/Education/Projects/Music/Music/build/Debug-iphoneos/Music.app"; sourceTree = "<absolute>"; };
+		40CA63602AC1F7DE00B8B4DA /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Music.app; path = "/Users/fullzoom/Desktop/Education/Projects/Music/Music/build/Debug-iphoneos/Music.app"; sourceTree = "<absolute>"; };
+		40CA63642AC1F92800B8B4DA /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		40CA63672AC1F97100B8B4DA /* CreateAccountTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTextField.swift; sourceTree = "<group>"; };
 		CA4E26B52AC0AB77000480D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA4E26B92AC0AB77000480D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA4E26BE2AC0AB78000480D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +132,31 @@
 			path = UIBuilder;
 			sourceTree = "<group>";
 		};
+		40CA63622AC1F82F00B8B4DA /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				40CA63662AC1F95900B8B4DA /* View */,
+				40CA63632AC1F90C00B8B4DA /* Controller */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		40CA63632AC1F90C00B8B4DA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40CA63642AC1F92800B8B4DA /* CreateAccountViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		40CA63662AC1F95900B8B4DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40CA63672AC1F97100B8B4DA /* CreateAccountTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CA4E26A92AC0AB77000480D3 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +206,7 @@
 			children = (
 				400A3FA82AC0BDE40086F644 /* Onboarding */,
 				CA4E26CD2AC0AC92000480D3 /* Login */,
+				40CA63622AC1F82F00B8B4DA /* CreateAccount */,
 				400A3FA02AC0BCDA0086F644 /* SignUp */,
 			);
 			path = Modules;
@@ -235,7 +265,7 @@
 			);
 			name = Music;
 			productName = Music;
-			productReference = 40CA63572AC1E76900B8B4DA /* Music.app */;
+			productReference = 40CA63602AC1F7DE00B8B4DA /* Music.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -288,6 +318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40CA63652AC1F92800B8B4DA /* CreateAccountViewController.swift in Sources */,
+				40CA63682AC1F97100B8B4DA /* CreateAccountTextField.swift in Sources */,
 				CA78AF002AC0CD2A00699F55 /* Button.swift in Sources */,
 				40CA635D2AC1E9DB00B8B4DA /* addSubviews.swift in Sources */,
 				40CA635C2AC1E9D900B8B4DA /* UIButton.swift in Sources */,
