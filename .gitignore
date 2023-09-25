@@ -95,6 +95,7 @@ iOSInjectionProject/
 !*.xcodeproj/xcshareddata/
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
+.DS_Store
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
