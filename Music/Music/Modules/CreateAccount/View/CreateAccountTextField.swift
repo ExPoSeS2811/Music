@@ -6,30 +6,10 @@ class CreateAccountTextField: BaseTextField {
         
         self.placeholder = placeholder
         self.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        self.textColor = .systemGray4
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.layer.borderColor = UIColor.systemGray5.cgColor
         self.layer.cornerRadius = 24
-        self.backgroundColor = .systemGray6
-    }
-    
-    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
-    }
-    
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
-    }
-    
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
-    }
-    
-    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
-        var textRect = super.rightViewRect(forBounds: bounds)
-        textRect.origin.x -= padding.right
-        
-        return textRect
+        self.layer.borderWidth = 0
+        self.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 1, alpha: 1)
     }
     
     @available(*, unavailable)

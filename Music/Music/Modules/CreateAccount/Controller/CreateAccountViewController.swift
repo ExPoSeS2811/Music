@@ -1,61 +1,64 @@
 import UIKit
 
 class CreateAccountViewController: UIViewController {
-    private lazy var createAccountLabelStackView: UIStackView = {
-        let label1 = UILabel()
-        label1.text = "Create account"
-        label1.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        label1.textColor = .white
-        label1.textAlignment = .center
+    private lazy var greetingStackView: UIStackView = {
+        let createAccountLabel = UILabel(text: "Create account", font: .boldSystemFont(ofSize: 24), textColor: .white)
+        let createAccountDescriptionLabel = UILabel(text: "Create a new account to start using Music", font: .systemFont(ofSize: 16), textColor: .white)
         
-        let label2 = UILabel()
-        label2.text = "Lorem ipsum dolor sit amet"
-        label2.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        label2.textColor = .white
-        label2.textAlignment = .center
-        
-        let stackView = UIStackView(arrangedSubviews: [label1, label2])
-        
+        let stackView = UIStackView(arrangedSubviews: [createAccountLabel, createAccountDescriptionLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
+        stackView.distribution = .fillProportionally
         stackView.spacing = 8
-        stackView.alignment = .center
+        
         return stackView
+    }()
+    
+    private lazy var emailLabel: UILabel = .init(text: "Email", font: .systemFont(ofSize: 16), textColor: .systemGray, textAlignment: .left)
+    
+    private lazy var contentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 24
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        return view
     }()
     
     private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.spacing = 64
-        return stackView
-    }()
-    
-    private lazy var contentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.layer.cornerRadius = 32
-        view.layer.cornerCurve = .continuous
-        view.translatesAutoresizingMaskIntoConstraints = false
-        
-        return view
-    }()
-    
-    private lazy var contentViewStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        stackView.axis = .vertical
         stackView.distribution = .fillEqually
-        stackView
-        
+        stackView.spacing = 32
         return stackView
     }()
     
-    private lazy var loginButtonStackView: UIStackView = BaseStackView(spacing: 16)
+    private lazy var emailTextField = CreateAccountTextField(placeholder: "Enter your email address")
     private lazy var orContinueStackView: UIStackView = OrContinueStackView()
-    private lazy var loginButton: UIButton = LoginButton(title: "Sign in")
+    private lazy var loginButton: UIButton = LoginButton(title: "Sign up with email")
     private lazy var loginWithGoogleButton: UIButton = LoginWithGoogleButton(title: "Continue with Google")
+
+    private lazy var registerStackView: UIStackView = {
+        let label = UILabel()
+        label.text = "Already have an account?"
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.textColor = .gray
+
+        let registerButton = UIButton(type: .system)
+        registerButton.setTitle("Sign in", for: .normal)
+        registerButton.setTitleColor(.systemBlue, for: .normal)
+        registerButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+
+        let stackView = UIStackView(arrangedSubviews: [label, registerButton])
+        stackView.axis = .horizontal
+        stackView.distribution = .fillProportionally
+        stackView.spacing = 4
+
+        return stackView
+    }()
+
+    private lazy var registerLabelStackView: UIStackView = RegisterLabelStackView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,30 +67,44 @@ class CreateAccountViewController: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = .systemBlue
-        view.addSubview(mainStackView)
-        mainStackView.addArrangedSubview(createAccountLabelStackView)
-        mainStackView.addArrangedSubview(contentView)
-        view.addSubview(contentViewStackView)
-        contentViewStackView.addArrangedSubview(loginButton)
-        contentViewStackView.addArrangedSubview(orContinueStackView)
-        contentViewStackView.addArrangedSubview(loginWithGoogleButton)
+        view.addSubviews(greetingStackView, contentView, mainStackView)
+        view.addSubview(emailLabel)
+        mainStackView.addArrangedSubviews(emailTextField, loginButton, orContinueStackView, loginWithGoogleButton, registerLabelStackView)
+        registerLabelStackView.addArrangedSubview(registerStackView)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView))
+        view.addGestureRecognizer(tapGesture)
         setupConstraints()
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            createAccountLabelStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            createAccountLabelStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            greetingStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
+            greetingStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            greetingStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            greetingStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
         
         NSLayoutConstraint.activate([
+            contentView.topAnchor.constraint(equalTo: greetingStackView.bottomAnchor, constant: 64),
             contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            contentViewStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32),
-            contentViewStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            contentViewStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            contentViewStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+            contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        NSLayoutConstraint.activate([
+            emailLabel.leadingAnchor.constraint(equalTo: mainStackView.leadingAnchor),
+            emailLabel.trailingAnchor.constraint(equalTo: mainStackView.trailingAnchor),
+            emailLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32)
+        ])
+        
+        NSLayoutConstraint.activate([
+            mainStackView.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 8),
+            mainStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
+            mainStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24)
+        ])
+    }
+    
+    @objc private func didTapView() {
+        view.endEditing(true)
     }
 }

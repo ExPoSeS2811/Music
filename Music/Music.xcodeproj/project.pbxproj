@@ -38,7 +38,6 @@
 		40CA634E2AC1CFE500B8B4DA /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		40CA63642AC1F92800B8B4DA /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		40CA63672AC1F97100B8B4DA /* CreateAccountTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTextField.swift; sourceTree = "<group>"; };
-		40CA636A2AC1FA9A00B8B4DA /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Music.app; path = "/Users/fullzoom/Desktop/Education/Projects/Music/Music/build/Debug-iphoneos/Music.app"; sourceTree = "<absolute>"; };
 		CA4E26B52AC0AB77000480D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA4E26B92AC0AB77000480D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA4E26BE2AC0AB78000480D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+addSubview.swift"; sourceTree = "<group>"; };
 		CA8DA31B2AC0BB630026C4EB /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		CA8DA31D2AC0BD2E0026C4EB /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		CAD72C672AC200770015CDC8 /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4E26B42AC0AB77000480D3 /* Music */,
+				CAD72C672AC200770015CDC8 /* Music.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -265,7 +266,7 @@
 			);
 			name = Music;
 			productName = Music;
-			productReference = 40CA636A2AC1FA9A00B8B4DA /* Music.app */;
+			productReference = CAD72C672AC200770015CDC8 /* Music.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
