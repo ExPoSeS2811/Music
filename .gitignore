@@ -98,5 +98,6 @@ iOSInjectionProject/
 .DS_Store
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+Music/Music.xcodeproj/project.pbxproj
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift
