@@ -10,7 +10,7 @@ class BaseTextField: UITextField {
         super.init(frame: .zero)
         self.placeholder = placeholder
         self.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        self.textColor = .systemGray4
+        self.textColor = .black
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.systemGray5.cgColor
