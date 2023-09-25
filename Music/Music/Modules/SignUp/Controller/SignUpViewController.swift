@@ -17,11 +17,11 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        setupNavigationBarWithBackButton(title: "Sign Up")
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        setupNavigationBarWithBackButton(title: "Sign Up")
         setupUI()
     }
     
