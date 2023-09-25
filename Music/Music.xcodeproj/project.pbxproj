@@ -51,6 +51,7 @@
 		CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+addSubview.swift"; sourceTree = "<group>"; };
 		CA8DA31B2AC0BB630026C4EB /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		CA8DA31D2AC0BD2E0026C4EB /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		CAD72C672AC200770015CDC8 /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				CA4E26B42AC0AB77000480D3 /* Music */,
+				CAD72C672AC200770015CDC8 /* Music.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,7 +270,7 @@
 			);
 			name = Music;
 			productName = Music;
-			productReference = 40CA636A2AC1FA9A00B8B4DA /* Music.app */;
+			productReference = CAD72C672AC200770015CDC8 /* Music.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
