@@ -9,6 +9,7 @@ class LoginButton: UIButton {
         self.setTitleColor(.white, for: .normal)
         self.backgroundColor = .systemBlue
         self.layer.cornerRadius = 24
+        self.layer.cornerCurve = .continuous
     }
 
     @available(*, unavailable)

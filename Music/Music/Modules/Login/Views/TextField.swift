@@ -3,8 +3,8 @@ import UIKit
 /// `LoginTextField` is a subclass of `UITextField` customized for the login screen.
 /// It sets the default font, text color, and other UI related configurations.
 
-class LoginTextField: UITextField {
-    private let padding = UIEdgeInsets(top: 14, left: 16, bottom: 14, right: 16)
+class BaseTextField: UITextField {
+    let padding = UIEdgeInsets(top: 14, left: 16, bottom: 14, right: 16)
     
     init(placeholder: String) {
         super.init(frame: .zero)
@@ -45,7 +45,7 @@ class LoginTextField: UITextField {
 
 /// `LoginPasswordTextField` is a subclass of `LoginTextField` customized for password input.
 /// It adds a right view with an "eye" button for toggling password visibility.
-class LoginPasswordTextField: LoginTextField {
+class LoginPasswordTextField: BaseTextField {
     init() {
         super.init(placeholder: "Password")
         
