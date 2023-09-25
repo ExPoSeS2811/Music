@@ -5,10 +5,12 @@ class LoginViewController: UIViewController {
     private lazy var loginTextViewStackView: UIStackView = BaseStackView()
     private lazy var loginButtonStackView: UIStackView = BaseStackView(spacing: 16)
     private lazy var loginLabel: CredentialLabel = .init(text: "Login", fontSize: 16, fontWeight: .semibold)
-    private lazy var loginTextField: LoginTextField = .init(placeholder: "Login")
+    private lazy var loginTextField: BaseTextField = .init(placeholder: "Login")
     private lazy var passwordLabel: CredentialLabel = .init(text: "Password", fontSize: 16, fontWeight: .semibold)
     private lazy var passwordTextField: LoginPasswordTextField = .init()
     private lazy var orContinueStackView: UIStackView = OrContinueStackView()
+    private lazy var loginButton: UIButton = LoginButton(title: "Sign in")
+    private lazy var loginWithGoogleButton: UIButton = LoginWithGoogleButton(title: "Continue with Google")
     private lazy var registerLabelStackView: UIStackView = RegisterLabelStackView()
 
     private lazy var registerStackView: UIStackView = {
@@ -30,9 +32,6 @@ class LoginViewController: UIViewController {
 
         return stackView
     }()
-
-    private lazy var loginButton: UIButton = LoginButton(title: "Sign in")
-    private lazy var loginWithGoogleButton: UIButton = LoginWithGoogleButton(title: "Continue with Google")
 
     override func viewDidLoad() {
         super.viewDidLoad()

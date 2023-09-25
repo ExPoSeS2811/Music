@@ -15,6 +15,8 @@
 		CA78AF002AC0CD2A00699F55 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AEFF2AC0CD2A00699F55 /* Button.swift */; };
 		CA78AF022AC0DE2300699F55 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AF012AC0DE2300699F55 /* StackView.swift */; };
 		CA78AF052AC0E29000699F55 /* UIStackView+addSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */; };
+		CA78AF0C2AC0E92E00699F55 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AF0B2AC0E92E00699F55 /* RegisterViewController.swift */; };
+		CA78AF0E2AC0EBBB00699F55 /* RegisterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA78AF0D2AC0EBBB00699F55 /* RegisterTextField.swift */; };
 		CA8DA31C2AC0BB630026C4EB /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DA31B2AC0BB630026C4EB /* TextField.swift */; };
 		CA8DA31E2AC0BD2E0026C4EB /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8DA31D2AC0BD2E0026C4EB /* Label.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,8 @@
 		CA78AEFF2AC0CD2A00699F55 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CA78AF012AC0DE2300699F55 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
 		CA78AF042AC0E29000699F55 /* UIStackView+addSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+addSubview.swift"; sourceTree = "<group>"; };
+		CA78AF0B2AC0E92E00699F55 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		CA78AF0D2AC0EBBB00699F55 /* RegisterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTextField.swift; sourceTree = "<group>"; };
 		CA8DA31B2AC0BB630026C4EB /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		CA8DA31D2AC0BD2E0026C4EB /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +233,47 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CA78AF062AC0E8A900699F55 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CA78AF072AC0E8C400699F55 /* Models */,
+				CA78AF082AC0E8CF00699F55 /* Views */,
+				CA78AF092AC0E8D900699F55 /* ViewModels */,
+				CA78AF0A2AC0E8EF00699F55 /* Controllers */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		CA78AF072AC0E8C400699F55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA78AF082AC0E8CF00699F55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA78AF0D2AC0EBBB00699F55 /* RegisterTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA78AF092AC0E8D900699F55 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CA78AF0A2AC0E8EF00699F55 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA78AF0B2AC0E92E00699F55 /* RegisterViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +352,7 @@
 				CA8DA31E2AC0BD2E0026C4EB /* Label.swift in Sources */,
 				CA4E26B62AC0AB77000480D3 /* AppDelegate.swift in Sources */,
 				CA78AF022AC0DE2300699F55 /* StackView.swift in Sources */,
+				CA78AF0E2AC0EBBB00699F55 /* RegisterTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
