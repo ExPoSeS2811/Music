@@ -9,6 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = window {
             let vc = UINavigationController(rootViewController: OnboardingPageViewController())
             window.rootViewController = vc
+
+            window.makeKeyAndVisible()
+        }
         return true
     }
 }
