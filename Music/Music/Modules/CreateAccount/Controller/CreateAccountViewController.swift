@@ -34,7 +34,7 @@ class CreateAccountViewController: UIViewController {
         return stackView
     }()
     
-    private lazy var emailTextField = CreateAccountTextField(placeholder: "Enter your email address")
+    private lazy var emailTextField = CreateAccountTextField(placeholder: "Enter your email address", cornerRadius: 12)
     private lazy var orContinueStackView: UIStackView = OrContinueStackView()
     private lazy var loginButton: UIButton = {
         let button = LoginButton(title: "Sign up with email")
@@ -43,24 +43,7 @@ class CreateAccountViewController: UIViewController {
     }()
     private lazy var loginWithGoogleButton: UIButton = LoginWithGoogleButton(title: "Continue with Google")
 
-    private lazy var registerStackView: UIStackView = {
-        let label = UILabel()
-        label.text = "Already have an account?"
-        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-        label.textColor = .gray
-
-        let registerButton = UIButton(type: .system)
-        registerButton.setTitle("Sign in", for: .normal)
-        registerButton.setTitleColor(.systemBlue, for: .normal)
-        registerButton.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-
-        let stackView = UIStackView(arrangedSubviews: [label, registerButton])
-        stackView.axis = .horizontal
-        stackView.distribution = .fillProportionally
-        stackView.spacing = 4
-
-        return stackView
-    }()
+    private lazy var registerStackView = SignInStackView()
 
     private lazy var registerLabelStackView: UIStackView = RegisterLabelStackView()
 

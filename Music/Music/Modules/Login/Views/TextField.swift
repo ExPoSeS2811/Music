@@ -6,7 +6,7 @@ import UIKit
 class BaseTextField: UITextField {
     let padding = UIEdgeInsets(top: 14, left: 16, bottom: 14, right: 16)
     
-    init(placeholder: String) {
+    init(placeholder: String, cornerRadius: CGFloat) {
         super.init(frame: .zero)
         self.placeholder = placeholder
         self.font = UIFont.systemFont(ofSize: 14, weight: .medium)
@@ -14,8 +14,8 @@ class BaseTextField: UITextField {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.systemGray5.cgColor
-        self.layer.cornerRadius = 12
-        self.backgroundColor = .systemGray6
+        self.layer.cornerRadius = cornerRadius
+        self.backgroundColor = UIColor(red: 0.96, green: 0.97, blue: 1, alpha: 1)
     }
     
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
@@ -46,15 +46,21 @@ class BaseTextField: UITextField {
 /// `LoginPasswordTextField` is a subclass of `LoginTextField` customized for password input.
 /// It adds a right view with an "eye" button for toggling password visibility.
 class LoginPasswordTextField: BaseTextField {
-    init() {
-        super.init(placeholder: "Password")
-        
+    override init(placeholder: String, cornerRadius: CGFloat) {
+        super.init(placeholder: placeholder, cornerRadius: cornerRadius)
         let eyeButton = UIButton(type: .custom)
         eyeButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
         eyeButton.frame = CGRect(x: CGFloat(self.frame.size.width - 25), y: CGFloat(5), width: CGFloat(16), height: CGFloat(16))
+        eyeButton.addTarget(self, action: #selector(togglePasswordVisibility(_:)), for: .touchUpInside)
         eyeButton.tintColor = .systemGray2
         self.rightView = eyeButton
         self.rightViewMode = .always
+    }
+    
+    @objc private func togglePasswordVisibility(_ sender: UIButton) {
+        self.isSecureTextEntry.toggle()
+        let imageName = self.isSecureTextEntry ? "eye.slash.fill" : "eye.fill"
+        sender.setImage(UIImage(systemName: imageName), for: .normal)
     }
     
     func setActionForEyeButton(_ target: Any?, action: Selector) {
@@ -66,4 +72,13 @@ class LoginPasswordTextField: BaseTextField {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+class LoginPasswordSignUp: LoginPasswordTextField {
+    override init(placeholder: String, cornerRadius: CGFloat) {
+        super.init(placeholder: placeholder, cornerRadius: cornerRadius)
+        self.layer.borderWidth = 0
+        self.layer.borderColor = UIColor.clear.cgColor
+    }
+    
 }

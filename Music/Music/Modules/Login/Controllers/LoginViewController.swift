@@ -5,9 +5,9 @@ class LoginViewController: UIViewController {
     private lazy var loginTextViewStackView: UIStackView = BaseStackView()
     private lazy var loginButtonStackView: UIStackView = BaseStackView(spacing: 16)
     private lazy var loginLabel: CredentialLabel = .init(text: "Login", fontSize: 16, fontWeight: .semibold)
-    private lazy var loginTextField: BaseTextField = .init(placeholder: "Login")
+    private lazy var loginTextField: BaseTextField = .init(placeholder: "Login", cornerRadius: 12)
     private lazy var passwordLabel: CredentialLabel = .init(text: "Password", fontSize: 16, fontWeight: .semibold)
-    private lazy var passwordTextField: LoginPasswordTextField = .init()
+    private lazy var passwordTextField: LoginPasswordTextField = .init(placeholder: "Password", cornerRadius: 12)
     private lazy var orContinueStackView: UIStackView = OrContinueStackView()
     private lazy var loginButton: UIButton = LoginButton(title: "Sign in")
     private lazy var loginWithGoogleButton: UIButton = LoginWithGoogleButton(title: "Continue with Google")
@@ -47,7 +47,6 @@ class LoginViewController: UIViewController {
         loginButtonStackView.addArrangedSubviews(loginButton, orContinueStackView, loginWithGoogleButton)
         registerLabelStackView.addArrangedSubview(registerStackView)
 
-        passwordTextField.setActionForEyeButton(self, action: #selector(togglePasswordVisibility(_:)))
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView))
         view.addGestureRecognizer(tapGesture)
 
@@ -67,12 +66,6 @@ class LoginViewController: UIViewController {
     private func configurationNavigationBar() {
         title = "Login"
         navigationController?.navigationBar.prefersLargeTitles = true
-    }
-
-    @objc private func togglePasswordVisibility(_ sender: UIButton) {
-        passwordTextField.isSecureTextEntry.toggle()
-        let imageName = passwordTextField.isSecureTextEntry ? "eye.slash.fill" : "eye.fill"
-        sender.setImage(UIImage(systemName: imageName), for: .normal)
     }
 
     @objc private func loginButtonTapped(_ sender: UIButton) {}

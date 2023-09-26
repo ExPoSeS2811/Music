@@ -1,8 +1,8 @@
 import UIKit
 
 class CreateAccountTextField: BaseTextField {
-    override init(placeholder: String) {
-        super.init(placeholder: placeholder)
+    override init(placeholder: String, cornerRadius: CGFloat) {
+        super.init(placeholder: placeholder, cornerRadius: cornerRadius)
         
         self.placeholder = placeholder
         self.font = UIFont.systemFont(ofSize: 16, weight: .medium)
